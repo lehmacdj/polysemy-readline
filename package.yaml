@@ -1,0 +1,47 @@
+name:                polysemy-haskeline
+version:             0.1.0.0
+github:              "lehmacdj/polysemy-haskeline"
+license:             BSD3
+author:              "Devin Lehmacher"
+maintainer:          "lehmacdj@gmail.com"
+copyright:           "Copyright: (c) 2021 Devin Lehmacher"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Miscellaneous
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/lehmacdj/polysemy-haskeline#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- exceptions
+- haskeline >= 0.8.1
+- polysemy
+- polysemy-plugin
+
+ghc-options:
+- -Wall
+- -fplugin=Polysemy.Plugin
+- -flate-specialise
+- -fspecialise-aggressively
+
+library:
+  source-dirs: src
+
+tests:
+  polysemy-haskeline-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - polysemy-haskeline
