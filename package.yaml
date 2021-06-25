@@ -5,14 +5,13 @@ license:             BSD3
 author:              "Devin Lehmacher"
 maintainer:          "lehmacdj@gmail.com"
 copyright:           "Copyright: (c) 2021 Devin Lehmacher"
+synopsis:            Readline effect for polysemy. Interpretable in terms of haskeline.
+category:            User Interfaces, Effect
 
 extra-source-files:
 - README.md
 - ChangeLog.md
 
-# Metadata used when publishing your package
-# synopsis:            Short description of your package
-# category:            Miscellaneous
 
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
@@ -28,6 +27,7 @@ dependencies:
 
 ghc-options:
 - -Wall
+- -Wincomplete-uni-patterns
 - -fplugin=Polysemy.Plugin
 - -flate-specialise
 - -fspecialise-aggressively
