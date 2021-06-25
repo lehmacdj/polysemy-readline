@@ -1,6 +1,6 @@
-name:                polysemy-haskeline
+name:                polysemy-readline
 version:             0.1.0.0
-github:              "lehmacdj/polysemy-haskeline"
+github:              "lehmacdj/polysemy-readline"
 license:             BSD3
 author:              "Devin Lehmacher"
 maintainer:          "lehmacdj@gmail.com"
@@ -17,7 +17,7 @@ extra-source-files:
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/lehmacdj/polysemy-haskeline#readme>
+description:         Please see the README on GitHub at <https://github.com/lehmacdj/polysemy-readline#readme>
 
 dependencies:
 - base >= 4.7 && < 5
@@ -36,7 +36,7 @@ library:
   source-dirs: src
 
 tests:
-  polysemy-haskeline-test:
+  polysemy-readline-test:
     main:                Spec.hs
     source-dirs:         test
     ghc-options:
@@ -44,4 +44,4 @@ tests:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - polysemy-haskeline
+    - polysemy-readline

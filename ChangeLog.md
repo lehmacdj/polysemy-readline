@@ -1,3 +1,3 @@
-# Changelog for polysemy-haskeline
+# Changelog for polysemy-readline
 
 ## Unreleased changes
