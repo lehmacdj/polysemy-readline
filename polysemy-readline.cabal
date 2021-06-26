@@ -34,7 +34,7 @@ library
       src
   ghc-options: -Wall -Wincomplete-uni-patterns -fplugin=Polysemy.Plugin -flate-specialise -fspecialise-aggressively
   build-depends:
-      base >=4.7 && <5
+      base >=4.12 && <5.0
     , exceptions >=0.10.4 && <0.11
     , haskeline >=0.8.1 && <0.9.0
     , polysemy >=1.5.0 && <1.6
