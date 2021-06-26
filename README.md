@@ -11,4 +11,5 @@ Issues or PRs are welcome. In particular there are a number of things that I don
 - additional interpreters matching the `run*` functions for `InputT`
 - support for older versions of Haskeline (currently only 0.8.1+ is supported)
 - version bumps for things that already compile but aren't allowed
+
 PRs for any of these things would be greatly appreciated or I might get around to implementing them myself later 🙂.
