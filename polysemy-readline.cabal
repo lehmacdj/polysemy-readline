@@ -35,10 +35,10 @@ library
   ghc-options: -Wall -Wincomplete-uni-patterns -fplugin=Polysemy.Plugin -flate-specialise -fspecialise-aggressively
   build-depends:
       base >=4.7 && <5
-    , exceptions
-    , haskeline >=0.8.1
-    , polysemy
-    , polysemy-plugin
+    , exceptions >=0.10.4 && <0.11
+    , haskeline >=0.8.1 && <0.9.0
+    , polysemy >=1.5.0 && <1.6
+    , polysemy-plugin >=0.3.0 && <0.4
   default-language: Haskell2010
 
 test-suite polysemy-readline-test
@@ -51,9 +51,9 @@ test-suite polysemy-readline-test
   ghc-options: -Wall -Wincomplete-uni-patterns -fplugin=Polysemy.Plugin -flate-specialise -fspecialise-aggressively -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
-    , exceptions
-    , haskeline >=0.8.1
-    , polysemy
-    , polysemy-plugin
+    , exceptions >=0.10.4 && <0.11
+    , haskeline >=0.8.1 && <0.9.0
+    , polysemy >=1.5.0 && <1.6
+    , polysemy-plugin >=0.3.0 && <0.4
     , polysemy-readline
   default-language: Haskell2010
