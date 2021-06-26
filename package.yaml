@@ -1,7 +1,7 @@
 name:                polysemy-readline
 version:             0.1.0.0
 github:              "lehmacdj/polysemy-readline"
-license:             BSD3
+license:             BSD-2-Clause
 author:              "Devin Lehmacher"
 maintainer:          "lehmacdj@gmail.com"
 copyright:           "Copyright: (c) 2021 Devin Lehmacher"

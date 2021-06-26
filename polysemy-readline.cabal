@@ -1,4 +1,4 @@
-cabal-version: 1.12
+cabal-version: 2.2
 
 -- This file has been generated from package.yaml by hpack version 0.34.4.
 --
@@ -14,7 +14,7 @@ bug-reports:    https://github.com/lehmacdj/polysemy-readline/issues
 author:         Devin Lehmacher
 maintainer:     lehmacdj@gmail.com
 copyright:      Copyright: (c) 2021 Devin Lehmacher
-license:        BSD3
+license:        BSD-2-Clause
 license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
