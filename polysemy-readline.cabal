@@ -1,21 +1,24 @@
 cabal-version: 2.2
 
 name:           polysemy-readline
+synopsis:       Readline effect for polysemy.
 version:        0.1.0.0
-synopsis:       Readline effect for polysemy. Interpretable in terms of haskeline.
-description:    Please see the README on GitHub at <https://github.com/lehmacdj/polysemy-readline#readme>
 category:       User Interfaces, Effect
 homepage:       https://github.com/lehmacdj/polysemy-readline#readme
 bug-reports:    https://github.com/lehmacdj/polysemy-readline/issues
 author:         Devin Lehmacher
-maintainer:     lehmacdj@gmail.com
-copyright:      Copyright: (c) 2021 Devin Lehmacher
+maintainer:     Devin Lehmacher
+copyright:      (c) 2021 Devin Lehmacher
 license:        BSD-2-Clause
 license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
     README.md
     ChangeLog.md
+description:
+  This library provides a Readline effect for polysemy with a primary
+  interpreter based on haskeline. Please see the README on GitHub at
+  <https://github.com/lehmacdj/polysemy-readline#readme> for more details.
 
 source-repository head
   type: git
