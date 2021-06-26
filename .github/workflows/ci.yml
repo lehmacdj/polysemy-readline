@@ -36,6 +36,11 @@ jobs:
         ghc-version: ${{ matrix.ghc }}
         cabal-version: ${{ matrix.cabal }}
 
+    - name: Diagnostic info
+      run: |
+        pwd
+        ls -la
+
     - name: Freeze
       run: |
         cabal freeze
