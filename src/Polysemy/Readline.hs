@@ -11,7 +11,7 @@
 -- | This libraries provides a polysemy effect that provides interactive command
 -- line usage.
 module Polysemy.Readline
-  ( -- * effect + actions
+  ( -- * Effect and Actions
     Readline (..),
     getInputLine,
     getInputLineWithInitial,
@@ -21,11 +21,11 @@ module Polysemy.Readline
     outputStr,
     outputStrLn,
 
-    -- * interpreters
+    -- * Interpreters
     runReadline,
     interpretReadlineAsInputT,
 
-    -- * re-exports
+    -- * Re-exports from @haskeline@
     H.Settings,
     H.defaultSettings,
   )
@@ -37,8 +37,8 @@ import Polysemy
 import Polysemy.Embed
 import qualified System.Console.Haskeline as H
 
--- | See documentation in haskeline package for the corresponding functions with
--- the same name.
+-- | For documentation on actions see haskeline's functions with the same name
+-- and similar type signatures.
 data Readline (m :: * -> *) a where
   GetInputLine :: String -> Readline m (Maybe String)
   GetInputLineWithInitial :: String -> (String, String) -> Readline m (Maybe String)
