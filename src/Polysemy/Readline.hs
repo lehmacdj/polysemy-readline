@@ -56,9 +56,16 @@ makeSem ''Readline
 outputStrLn :: Member Readline r => String -> Sem r ()
 outputStrLn str = outputStr (str <> "\n")
 
--- | The standard way to run a Readline effect. Should be sufficient for
--- most use cases. If you want to modify the Behavior or Prefs of InputT use
--- interpretReadlineAsInputT instead.
+-- | The standard way to run a Readline effect. Immediately eliminates the
+-- resulting `H.InputT`. There is one problem with this approach however.
+-- Internal details of polysemy cause `H.runInputT` to be run several times,
+-- and the History state of consecutive runs is not preserved unless there is a
+-- history file. If you want history for your repl there are therefore two
+-- recommended approaches:
+-- * Provide a history file in the settings you specify. e.g.
+-- @runReadline (@`H.defaultSettings`@ {@`H.historyFile`@ = ".repl_history"})@.
+-- * Use interpretReadlineAsInputT, and run the `H.InputT` only after using
+-- `runM` to escape polysemy land.
 runReadline ::
   forall m r a.
   (MonadIO m, MonadMask m, Member (Embed m) r) =>
