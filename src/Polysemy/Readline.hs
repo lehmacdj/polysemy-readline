@@ -65,6 +65,7 @@ outputStrLn str = outputStr (str <> "\n")
 -- to 'H.runInputT'), and the History state of consecutive runs is not
 -- preserved unless there is a history file. If you want history for your repl
 -- there are therefore two recommended approaches:
+--
 -- * Provide a history file in the settings you specify. e.g.
 -- @runReadline ('H.defaultSettings' {historyFile = Just ".repl_history"})@.
 -- This is the easiest approach but technically suboptimal because the history
