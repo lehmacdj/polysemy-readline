@@ -2,7 +2,7 @@ cabal-version: 2.2
 
 name:           polysemy-readline
 synopsis:       Readline effect for polysemy.
-version:        0.1.0.0
+version:        0.2.0.0
 category:       User Interfaces, Effect
 homepage:       https://github.com/lehmacdj/polysemy-readline#readme
 bug-reports:    https://github.com/lehmacdj/polysemy-readline/issues
@@ -51,6 +51,17 @@ library
       Paths_polysemy_readline
   hs-source-dirs:
       src
+
+executable echo-repl
+  import: common-options
+  import: exe-options
+  main-is: Echo.hs
+  other-modules:
+      Paths_polysemy_readline
+  autogen-modules:
+      Paths_polysemy_readline
+  build-depends: polysemy-readline
+  hs-source-dirs: examples
 
 test-suite polysemy-readline-test
   import: common-options
