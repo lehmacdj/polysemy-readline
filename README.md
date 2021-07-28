@@ -1,6 +1,6 @@
 # polysemy-readline
 [![GitHub Actions](https://github.com/lehmacdj/polysemy-readline/actions/workflows/ci.yml/badge.svg)](https://github.com/lehmacdj/polysemy-readline/actions/workflows/ci.yml)
-[![Hackage](https://img.shields.io/hackage/v/polysemy-readline.svg?logo=haskell)](https://hackage.haskell.org/package/polysemy-readline-0.2.0.0)
+[![Hackage](https://img.shields.io/hackage/v/polysemy-readline.svg?logo=haskell)](https://hackage.haskell.org/package/polysemy-readline)
 
 This package provides a [polysemy](https://github.com/polysemy-research/polysemy#readme) effect that provides most of the functionality of [haskeline](https://github.com/judah/haskeline#readme). See Haskeline's documentation for additional usage information.
 
