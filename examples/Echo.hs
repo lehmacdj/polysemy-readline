@@ -17,6 +17,5 @@ main :: IO ()
 main =
   runInputT defaultSettings
     . runFinal
-    . embedToFinal
-    . interpretReadlineAsInputT
+    . runReadlineFinal
     $ repl
