@@ -1,8 +1,8 @@
-cabal-version: 2.2
+cabal-version: 3.0
 
 name:           polysemy-readline
 synopsis:       Readline effect for polysemy.
-version:        0.2.0.0
+version:        0.3.0.0
 category:       User Interfaces, Effect
 homepage:       https://github.com/lehmacdj/polysemy-readline#readme
 bug-reports:    https://github.com/lehmacdj/polysemy-readline/issues
