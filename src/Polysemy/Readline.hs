@@ -103,10 +103,22 @@ runReadlineFinal = interpretFinal $ \case
     pure $ H.handleInterrupt handler' action'
 
 -- | Interpret in terms of an embedded 'H.InputT' stack.
+--
+-- Using this is deprecated in favor of 'runReadlineFinal'. Errors when
+-- handling 'WithInterrupt' and 'HandleInterrupt', they are not supported.
 interpretReadlineAsInputT ::
   forall m r a.
-  (MonadIO m, MonadMask m, Member (Final (H.InputT m)) r) =>
+  (MonadIO m, MonadMask m, Member (Embed (H.InputT m)) r) =>
   Sem (Readline : r) a ->
   Sem r a
-interpretReadlineAsInputT = runReadlineFinal
+interpretReadlineAsInputT = interpretH $ \case
+  GetInputLine prompt -> pureT =<< embed (H.getInputLine prompt)
+  GetInputLineWithInitial prompt initial ->
+    pureT =<< embed (H.getInputLineWithInitial prompt initial)
+  GetInputChar prompt -> pureT =<< embed (H.getInputChar prompt)
+  GetPassword maskChar prompt -> pureT =<< embed (H.getPassword maskChar prompt)
+  WaitForAnyKey prompt -> pureT =<< embed (H.waitForAnyKey prompt)
+  OutputStr str -> pureT =<< embed (H.outputStr str)
+  WithInterrupt _ -> error "interpretReadlineAsInputT: WithInterrupt not supported"
+  HandleInterrupt _ _ -> error "interpretReadlineAsInputT: HandleInterrupt not supported"
 {-# DEPRECATED interpretReadlineAsInputT "Use runReadlineFinal instead" #-}
