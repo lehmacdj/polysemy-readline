@@ -65,7 +65,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        stack: ["2.5.1"]
+        stack: ["3.7.1"]
 
     steps:
     - uses: actions/checkout@v3
